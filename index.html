@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wedding Shop by Vifery · Despedidas de soltera y bodas</title>
+<meta name="description" content="Todo lo que necesitas para el año de tu boda: despedida de soltera, accesorios para la novia, juegos y decoración. Envíos a todo México. Paga seguro con Mercado Pago.">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="canonical" href="https://www.weddingshop.mx/">
+<meta name="theme-color" content="#E4846D">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wedding Shop by Vifery">
+<meta property="og:title" content="Wedding Shop by Vifery · Todo para el año de tu boda">
+<meta property="og:description" content="Despedida de soltera, accesorios para la novia, juegos y decoración. Envíos a todo México.">
+<meta property="og:url" content="https://www.weddingshop.mx/">
+<meta property="og:image" content="https://www.weddingshop.mx/img/compartir.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Questrial&display=swap" rel="stylesheet">
+<style>
+/* Manual de identidad + Instagram: nude #E6BFAC · coral #E4846D · durazno #FF9969 · gris cálido #D2CDC9
+   Gotham → Montserrat · Glacial Indifference → Questrial · títulos serif (Cormorant) + caligrafía (Great Vibes) como en los posts */
+:root{
+  --nude:#E6BFAC; --nude-claro:#F3DFD5; --coral:#E4846D; --coral-osc:#D9715A; --durazno:#FF9969; --gris:#D2CDC9;
+  --fondo:#FFFFFF; --crema:#FBF5F1; --texto:#3F3A38; --suave:#857B77; --linea:#EFE4DE;
+  --wa:#25D366;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--fondo);color:var(--texto);font-family:'Questrial',system-ui,sans-serif;font-size:16px;line-height:1.5}
+img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;letter-spacing:.06em;text-transform:uppercase}
+.script{font-family:'Great Vibes',cursive;text-transform:none;letter-spacing:0;font-weight:400}
+.logo-color{display:block;-webkit-mask:url(img/logo.webp) center/contain no-repeat;mask:url(img/logo.webp) center/contain no-repeat;background:linear-gradient(135deg,var(--nude),var(--coral))}
+
+/* Barra superior */
+.aviso{background:var(--coral);color:#fff;font-size:13px;letter-spacing:.04em}
+.aviso .wrap{display:flex;justify-content:center;align-items:center;gap:16px;min-height:36px;position:relative}
+.aviso .redes{position:absolute;right:16px;display:flex;gap:12px}
+.redes a{display:grid;place-items:center;opacity:.95}
+.redes svg{width:16px;height:16px;fill:currentColor}
+
+/* Encabezado y menú */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
+.head{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
+.marca{text-decoration:none;display:flex;align-items:center;gap:12px}
+.marca .logo-color{width:46px;height:46px}
+.marca span{display:flex;flex-direction:column;line-height:1}
+.marca b{font-family:'Montserrat',sans-serif;font-weight:300;font-size:20px;letter-spacing:.26em;text-transform:lowercase;white-space:nowrap}
+.marca small{align-self:flex-end;font-size:9px;letter-spacing:.4em;color:var(--suave);margin-top:6px;border-top:1px solid var(--texto);padding-top:4px;padding-left:24px}
+nav.menu{display:flex;gap:4px;font-size:14px;letter-spacing:.05em;height:100%}
+.mi{position:relative;display:flex;align-items:center}
+.mi > a,.mi > button{display:flex;align-items:center;gap:6px;padding:0 12px;height:100%;text-decoration:none;color:var(--suave)}
+.mi > a:hover,.mi > button:hover,.mi.on > a,.mi.on > button{color:var(--coral)}
+.mi > button::after{content:"";width:6px;height:6px;border-right:1.4px solid currentColor;border-bottom:1.4px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.drop{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--linea);border-radius:0 0 14px 14px;box-shadow:0 18px 40px rgba(120,70,50,.12);padding:22px 26px;display:none;gap:32px;white-space:nowrap}
+.mi:hover .drop,.mi:focus-within .drop{display:flex}
+.drop h5{font-family:'Montserrat',sans-serif;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:var(--coral);margin-bottom:10px}
+.drop h5 a{text-decoration:none}
+.drop ul{list-style:none;display:grid;gap:7px;font-size:14px}
+.drop ul.dos{grid-template-columns:auto auto;column-gap:26px}
+.drop a{text-decoration:none;color:var(--texto)}
+.drop a:hover{color:var(--coral)}
+.drop .todo{margin-top:12px;font-size:13px;color:var(--coral)}
+.acc{display:flex;align-items:center;gap:8px}
+.btn-carrito{display:flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid var(--coral);color:var(--coral);border-radius:999px;font-size:14px}
+.btn-carrito:hover{background:var(--coral);color:#fff}
+.contador{min-width:20px;height:20px;border-radius:10px;background:var(--coral);color:#fff;font-size:12px;display:grid;place-items:center;padding:0 6px}
+.hamb{display:none;width:42px;height:42px;place-items:center;border-radius:50%;border:1px solid var(--linea)}
+.hamb svg{width:20px;height:20px;stroke:var(--texto);stroke-width:1.6;fill:none}
+
+/* Menú móvil */
+.movil{position:fixed;top:0;left:0;bottom:0;width:min(340px,88%);background:#fff;z-index:60;transform:translateX(-100%);transition:.3s;overflow:auto;padding:18px 20px 40px}
+.movil.on{transform:none}
+.movil .cab-m{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.movil details{border-bottom:1px solid var(--linea)}
+.movil summary{list-style:none;padding:14px 0;cursor:pointer;display:flex;justify-content:space-between;font-size:15px}
+.movil summary::after{content:"+";color:var(--coral);font-size:20px;line-height:1}
+.movil details[open] summary::after{content:"−"}
+.movil details ul{list-style:none;padding:0 0 12px 12px;display:grid;gap:9px;font-size:14px}
+.movil > a,.movil .ml{display:block;padding:14px 0;border-bottom:1px solid var(--linea);text-decoration:none;font-size:15px}
+.movil a{text-decoration:none}
+.movil h6{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.18em;color:var(--coral);text-transform:uppercase;margin:6px 0 4px}
+
+/* Portada */
+.hero{background:linear-gradient(110deg,#DE8B72 0%,#E6AA94 48%,var(--nude) 100%);color:#fff;overflow:hidden;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:32px;min-height:440px;padding-top:40px;padding-bottom:56px}
+.hero .pre{font-size:13px;letter-spacing:.3em;text-transform:uppercase;opacity:.9}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(36px,5.4vw,62px);line-height:1.05;text-transform:uppercase;letter-spacing:.04em;margin-top:10px}
+.hero h1 .script{display:block;font-size:1.25em;line-height:1;margin-top:4px}
+.hero p{margin-top:18px;font-size:18px;max-width:30em;opacity:.95}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:999px;font-size:15px;letter-spacing:.04em;text-decoration:none}
+.btn-blanco{background:#fff;color:var(--coral)}
+.btn-linea{border:1px solid #fff;color:#fff}
+.btn-coral{background:var(--coral);color:#fff}
+.btn-coral:hover{background:var(--coral-osc)}
+.btn-borde{border:1px solid var(--coral);color:var(--coral);background:#fff}
+.hero-logo{justify-self:center;width:min(360px,80%);filter:drop-shadow(0 6px 24px rgba(160,80,50,.22))}
+.lema{position:absolute;bottom:18px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:.5em;opacity:.85}
+
+/* Beneficios */
+.beneficios{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:28px 16px}
+.ben{display:flex;gap:12px;align-items:center;font-size:14px;color:var(--suave)}
+.ben i{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--nude-claro);color:var(--coral)}
+.ben i svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6}
+.ben b{display:block;color:var(--texto);font-weight:400}
+
+/* Secciones */
+.sec{padding:48px 0}
+.crema{background:var(--crema)}
+.cab{text-align:center;margin-bottom:28px}
+.cab h2{font-size:clamp(28px,4vw,40px);color:var(--coral)}
+.cab h2 .script{font-size:1.2em;color:var(--texto)}
+.cab p{color:var(--suave);margin-top:4px}
+.tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.tile{text-decoration:none;text-align:center;font-size:14px}
+.tile .tf{aspect-ratio:1;border-radius:50%;overflow:hidden;background:#fff;border:1px solid var(--linea);margin-bottom:10px;transition:.2s}
+.tile .tf img{width:100%;height:100%;object-fit:cover}
+.tile:hover .tf{border-color:var(--coral);transform:translateY(-2px)}
+
+/* Tienda */
+.migas{font-size:13px;color:var(--suave);padding:18px 0 0}
+.migas a{text-decoration:none}
+.migas a:hover{color:var(--coral)}
+.tienda{display:grid;grid-template-columns:230px 1fr;gap:32px;padding:20px 0 48px}
+.tienda > div,.ficha > div{min-width:0}
+.lateral h5{font-family:'Montserrat',sans-serif;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:var(--coral);margin:18px 0 8px}
+.lateral h5:first-child{margin-top:0}
+.lateral ul{list-style:none;display:grid;gap:4px;font-size:14px}
+.lateral a{text-decoration:none;color:var(--suave);display:flex;justify-content:space-between;padding:4px 10px;border-radius:8px}
+.lateral a:hover{color:var(--coral)}
+.lateral a.on{background:var(--nude-claro);color:var(--coral-osc)}
+.lateral small{opacity:.7}
+.barra{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap}
+.barra h1{font-size:clamp(26px,3.4vw,36px);color:var(--coral);line-height:1}
+.barra .n{color:var(--suave);font-size:14px}
+.buscar input{width:min(320px,100%);padding:11px 18px;border-radius:999px;border:1px solid var(--linea);background:#fff;font-size:14px;outline:none}
+.buscar input:focus{border-color:var(--coral)}
+.subchips{display:none;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:14px}
+.subchips a{flex:none;padding:8px 14px;border-radius:999px;border:1px solid var(--linea);background:#fff;font-size:13px;color:var(--suave);text-decoration:none}
+.subchips a.on{background:var(--coral);border-color:var(--coral);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.tienda .grid{grid-template-columns:repeat(3,1fr)}
+.card{background:#fff;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--linea);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(200,110,80,.12)}
+.card > a{text-decoration:none;display:block}
+.foto{aspect-ratio:1;background:#fff;position:relative}
+.foto img{width:100%;height:100%;object-fit:contain}
+.info{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.info h3{font-family:'Montserrat',sans-serif;font-weight:500;font-size:13px;line-height:1.35}
+.info h3 a{text-decoration:none}
+.precio{font-size:18px;color:var(--coral);margin-top:auto;padding-top:4px}
+.quedan{font-size:12px;color:var(--suave)}
+.agregar{width:100%;padding:10px;border-radius:999px;background:var(--coral);color:#fff;font-size:13px;letter-spacing:.04em;margin-top:6px;text-decoration:none;text-align:center;display:block}
+.agregar:hover{background:var(--coral-osc)}
+.agregar.linea{background:#fff;color:var(--coral);border:1px solid var(--coral)}
+.mas{display:flex;justify-content:center;margin-top:28px}
+.mas button{padding:13px 30px;border:1px solid var(--coral);color:var(--coral);border-radius:999px;background:#fff}
+.vacio-grid{text-align:center;color:var(--suave);padding:40px 0;grid-column:1/-1}
+
+/* Ficha de producto */
+.ficha{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;padding:20px 0 40px}
+.galeria .principal{aspect-ratio:1;border:1px solid var(--linea);border-radius:14px;overflow:hidden;background:#fff}
+.galeria .principal img{width:100%;height:100%;object-fit:contain}
+.miniaturas{display:flex;gap:10px;margin-top:12px;overflow-x:auto}
+.miniaturas button{flex:none;width:76px;height:76px;border:1px solid var(--linea);border-radius:10px;overflow:hidden;background:#fff}
+.miniaturas button.on{border-color:var(--coral);box-shadow:0 0 0 1px var(--coral)}
+.miniaturas img{width:100%;height:100%;object-fit:contain}
+.datos h1{font-family:'Montserrat',sans-serif;font-weight:400;font-size:clamp(20px,2.4vw,26px);line-height:1.3}
+.datos .precio{font-size:28px;margin:14px 0 4px}
+.datos .nota{font-size:13px;color:var(--suave)}
+.datos label{display:block;font-size:13px;color:var(--suave);margin:18px 0 6px}
+.datos select{width:100%;padding:12px 14px;border:1px solid var(--linea);border-radius:10px;background:#fff}
+.compra{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.cantidad{display:flex;align-items:center;border:1px solid var(--linea);border-radius:999px}
+.cantidad button{width:42px;height:48px;font-size:18px;color:var(--coral)}
+.cantidad span{min-width:28px;text-align:center}
+.compra .btn{flex:1;min-width:180px}
+.datos .pregunta{margin-top:10px;width:100%}
+.garantias{display:grid;gap:10px;margin-top:24px;padding:18px;border-radius:14px;background:var(--crema);font-size:14px}
+.garantias div{display:flex;gap:10px;align-items:center}
+.garantias div::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--coral)}
+.descripcion{max-width:820px;margin:0 auto;padding:8px 0 48px}
+.descripcion h2{font-size:30px;color:var(--coral);margin-bottom:14px;text-align:center}
+.descripcion h2 .script{color:var(--texto)}
+.descripcion p{margin-bottom:12px;color:#5A524F}
+
+/* Páginas de información */
+.pagina{max-width:820px;margin:0 auto;padding:28px 0 56px}
+.pagina h1{font-size:clamp(32px,4.6vw,48px);color:var(--coral);text-align:center;line-height:1}
+.pagina h1 .script{display:block;color:var(--texto);font-size:1.1em}
+.pagina .intro{text-align:center;color:var(--suave);max-width:36em;margin:14px auto 30px}
+.pagina h3{font-family:'Montserrat',sans-serif;font-weight:500;font-size:16px;margin:26px 0 8px;color:var(--coral-osc)}
+.pagina p,.pagina li{color:#5A524F;margin-bottom:8px}
+.pagina ul,.pagina ol{padding-left:22px}
+.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:10px 0 24px;counter-reset:p}
+.paso{background:var(--crema);border-radius:14px;padding:20px 16px;text-align:center;font-size:14px}
+.paso::before{counter-increment:p;content:counter(p);display:grid;place-items:center;width:36px;height:36px;margin:0 auto 10px;border-radius:50%;background:var(--coral);color:#fff;font-size:15px}
+.paso b{display:block;margin-bottom:4px;color:var(--texto);font-weight:400;font-size:15px}
+.aviso-caja{background:var(--nude-claro);border-radius:14px;padding:16px 18px;margin:20px 0;font-size:14px}
+.contacto{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;margin-top:10px}
+.canales{display:grid;gap:12px}
+.canal{display:flex;gap:14px;align-items:center;padding:16px;border:1px solid var(--linea);border-radius:14px;text-decoration:none}
+.canal:hover{border-color:var(--coral)}
+.canal i{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--nude-claro);color:var(--coral)}
+.canal i svg{width:20px;height:20px;fill:currentColor}
+.canal b{display:block;font-weight:400}
+.canal small{color:var(--suave)}
+form.forma{display:grid;gap:12px;background:var(--crema);padding:22px;border-radius:14px}
+form.forma input,form.forma textarea,form.forma select{width:100%;padding:12px 14px;border:1px solid var(--linea);border-radius:10px;background:#fff;outline:none}
+form.forma input:focus,form.forma textarea:focus{border-color:var(--coral)}
+form.forma textarea{min-height:120px;resize:vertical}
+
+/* Cómo comprar — estilo post "Checklist" */
+.checklist{background:var(--nude);color:#fff;border-radius:4px;padding:48px 32px;margin:0 auto;max-width:980px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.checklist h2{font-family:'Cormorant Garamond',serif;font-weight:400;text-transform:uppercase;letter-spacing:.06em;color:var(--coral);font-size:clamp(28px,4vw,42px);line-height:1}
+.checklist h2 .script{display:block;color:#fff;font-size:1.35em;margin-top:2px}
+.checklist p{margin-top:14px;font-size:15px}
+.checklist ul{list-style:none;display:grid;gap:12px;font-size:16px}
+.checklist li{display:flex;gap:12px;align-items:center}
+.checklist li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--coral)}
+
+/* Frase — estilo "Daily quote" */
+.quote{background:var(--coral);color:#fff;text-align:center;padding:56px 16px}
+.quote small{font-family:'Cormorant Garamond',serif;letter-spacing:.2em;font-size:13px}
+.quote h2{font-family:'Cormorant Garamond',serif;font-weight:300;text-transform:uppercase;font-size:clamp(28px,4.4vw,46px);line-height:1.15;margin-top:12px;letter-spacing:.04em}
+
+/* Pie */
+footer{background:#fff;border-top:1px solid var(--linea)}
+.pie{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;padding:48px 16px 28px}
+footer h4{font-family:'Montserrat',sans-serif;font-weight:500;letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:var(--coral);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;font-size:14px;color:var(--suave)}
+footer a{text-decoration:none}
+footer a:hover{color:var(--coral)}
+.pie .logo-color{width:84px;height:84px;margin-bottom:12px}
+.pie .redes{display:flex;gap:10px}
+.pie .redes a,.canales .redes a{width:40px;height:40px;border-radius:50%;background:var(--nude-claro);color:var(--coral)}
+.pie .redes a:hover{background:var(--coral);color:#fff}
+.pie .redes svg{width:18px;height:18px}
+.legal{border-top:1px solid var(--linea);padding:16px;text-align:center;font-size:12px;color:var(--suave)}
+
+/* WhatsApp flotante */
+.wa{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+
+/* Carrito */
+.velo{position:fixed;inset:0;background:rgba(60,40,35,.35);opacity:0;pointer-events:none;transition:.25s;z-index:40}
+.velo.on{opacity:1;pointer-events:auto}
+.panel{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:#fff;z-index:50;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column}
+.panel.on{transform:none}
+.panel-cab{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--linea)}
+.panel-cab h3{font-size:24px;color:var(--coral)}
+.cerrar{font-size:28px;line-height:1;color:var(--suave)}
+.items{flex:1;overflow:auto;padding:8px 20px}
+.item{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--linea)}
+.item img{width:64px;height:64px;object-fit:contain;background:#fff;border-radius:8px;border:1px solid var(--linea)}
+.item h5{font-family:'Montserrat',sans-serif;font-weight:500;font-size:12px;line-height:1.3}
+.item .var{font-size:12px;color:var(--suave)}
+.cant{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:14px}
+.cant button{width:26px;height:26px;border-radius:50%;border:1px solid var(--linea);background:#fff}
+.vacio{text-align:center;color:var(--suave);padding:48px 0}
+.panel-pie{padding:20px;border-top:1px solid var(--linea);display:grid;gap:12px;background:var(--crema)}
+.total{display:flex;justify-content:space-between;font-size:18px}
+.panel-pie .nota{font-size:12px;color:var(--suave)}
+.btn-wa{background:var(--wa);color:#fff;font-size:15px}
+.envio-est{display:flex;justify-content:space-between;font-size:14px;color:var(--suave);margin-top:-6px}
+.tabla{width:100%;border-collapse:collapse;margin:12px 0 8px;font-size:14px}
+.tabla th{text-align:left;font-family:'Montserrat',sans-serif;font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);padding:10px;border-bottom:1px solid var(--linea)}
+.tabla td{padding:12px 10px;border-bottom:1px solid var(--linea);color:#5A524F;vertical-align:top}
+.tabla td.c{white-space:nowrap;color:var(--coral-osc)}
+
+/* Responsive */
+@media (max-width:1040px){
+  nav.menu{display:none}
+  .hamb{display:grid}
+  .tienda{grid-template-columns:1fr}
+  .lateral{display:none}
+  .subchips{display:flex}
+}
+@media (max-width:980px){
+  .grid,.tienda .grid{grid-template-columns:repeat(3,1fr)}
+  .tiles{grid-template-columns:repeat(4,1fr)}
+  .beneficios{grid-template-columns:repeat(2,1fr)}
+  .pie{grid-template-columns:1fr 1fr}
+  .ficha{grid-template-columns:1fr;gap:24px}
+  .pasos{grid-template-columns:repeat(2,1fr)}
+  .contacto{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .aviso .redes{display:none}
+  .hero .wrap{grid-template-columns:1fr;text-align:center;min-height:0;padding-top:32px;padding-bottom:60px}
+  .hero p{margin-left:auto;margin-right:auto}
+  .hero .cta{justify-content:center}
+  .hero-logo{order:-1;width:180px}
+  .grid,.tienda .grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .tiles{grid-template-columns:repeat(3,1fr)}
+  .info{padding:10px}
+  .info h3{font-size:12px}
+  .checklist{grid-template-columns:1fr;padding:36px 22px}
+  .pie{grid-template-columns:1fr}
+  .marca .logo-color{width:38px;height:38px}
+  .marca b{font-size:14px;letter-spacing:.18em}
+  .marca small{padding-left:12px;letter-spacing:.3em}
+  .aviso{font-size:12px}
+  .btn-carrito span.txt{display:none}
+  .barra .buscar,.barra .buscar input{width:100%}
+}
+</style>
+</head>
+<body>
+
+<div class="aviso">
+  <div class="wrap">
+    <span>Envíos a todo México · Paga seguro con Mercado Pago</span>
+    <div class="redes"></div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap head">
+    <div class="acc">
+      <button class="hamb" id="abrirMenu" aria-label="Abrir menú"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <a class="marca" href="#/" aria-label="Wedding Shop by Vifery">
+        <i class="logo-color" aria-hidden="true"></i>
+        <span><b>wedding shop</b><small>BY VIFERY</small></span>
+      </a>
+    </div>
+    <nav class="menu" id="menu"></nav>
+    <button class="btn-carrito" id="abrirCarrito" aria-label="Abrir carrito">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      <span class="txt">Carrito</span><span class="contador" id="contador">0</span>
+    </button>
+  </div>
+</header>
+
+<aside class="movil" id="movil" aria-label="Menú"></aside>
+
+<main id="app"></main>
+
+<footer>
+  <div class="wrap pie">
+    <div>
+      <i class="logo-color" aria-hidden="true"></i>
+      <p style="font-size:14px;color:var(--suave);max-width:26em">¡Todo lo que necesitas para el año de tu boda! For a special year.</p>
+    </div>
+    <div>
+      <h4>Tienda</h4>
+      <ul>
+        <li><a href="#/tienda/despedida">Despedida de soltera</a></li>
+        <li><a href="#/tienda/bodas">Bodas</a></li>
+        <li><a href="#/tienda/groom">Groom to be</a></li>
+        <li><a href="#/tienda">Ver todo</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Ayuda</h4>
+      <ul>
+        <li><a href="#/como-comprar">Cómo comprar</a></li>
+        <li><a href="#/envios">Envíos</a></li>
+        <li><a href="#/devoluciones">Cambios y devoluciones</a></li>
+        <li><a href="#/nosotros">Quiénes somos</a></li>
+        <li><a href="#/contacto">Contacto</a></li>
+        <li><a href="#/privacidad">Aviso de privacidad</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Síguenos</h4>
+      <div class="redes"></div>
+      <ul style="margin-top:14px">
+        <li><a href="#" data-wa="Hola, tengo una pregunta">WhatsApp 33 2066 1300</a></li>
+        <li><a href="mailto:vifery.weddingshop@gmail.com">vifery.weddingshop@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal">© 2026 Wedding Shop by Vifery · Zapopan, Jalisco · Todos los derechos reservados</div>
+</footer>
+
+<a class="wa" href="#" data-wa="Hola, vengo de la página web" aria-label="Escríbenos por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+</a>
+
+<div class="velo" id="velo"></div>
+<aside class="panel" id="panel" aria-label="Carrito">
+  <div class="panel-cab"><h3 class="serif">Tu <span class="script">carrito</span></h3><button class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>
+  <div class="items" id="items"></div>
+  <div class="panel-pie">
+    <div class="total"><span>Subtotal</span><b id="total">$0</b></div>
+    <div class="envio-est"><span>Envío estimado</span><span id="envEst">desde $110</span></div>
+    <p class="nota">Te confirmamos el envío exacto según tu código postal y te mandamos tu link de pago por WhatsApp. <a href="#/envios" data-cerrar>Ver costos de envío</a></p>
+    <a class="btn btn-wa" id="enviar" href="#">Enviar pedido por WhatsApp</a>
+  </div>
+</aside>
+
+<script src="productos.js?v=2026-11-04"></script>
+<script>
+const WHATSAPP = '523320661300';
+const CORREO = 'vifery.weddingshop@gmail.com';
+const REDES = [
+  {n:'Instagram', u:'@weddingshop.vifery', url:'https://instagram.com/weddingshop.vifery', svg:'<path d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zM17 5.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM21.9 8a5.6 5.6 0 0 0-1.5-4 5.6 5.6 0 0 0-4-1.5C14.8 2.4 9.2 2.4 7.6 2.5a5.6 5.6 0 0 0-4 1.5A5.6 5.6 0 0 0 2.1 8c-.1 1.6-.1 6.4 0 8a5.6 5.6 0 0 0 1.5 4 5.6 5.6 0 0 0 4 1.5c1.6.1 7.2.1 8.8 0a5.6 5.6 0 0 0 4-1.5 5.6 5.6 0 0 0 1.5-4c.1-1.6.1-6.4 0-8zm-2.1 9.7a3.2 3.2 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.7.4s-4.4.1-5.7-.4a3.2 3.2 0 0 1-1.8-1.8c-.5-1.3-.4-4.3-.4-5.7s-.1-4.4.4-5.7A3.2 3.2 0 0 1 6.3 4.5c1.3-.5 4.3-.4 5.7-.4s4.4-.1 5.7.4a3.2 3.2 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.7s.1 4.4-.4 5.7z"/>'},
+  {n:'TikTok', u:'@weddingshop.vifery', url:'https://www.tiktok.com/@weddingshop.vifery', svg:'<path d="M16.6 2h-3.3v13.3a2.9 2.9 0 1 1-2-2.8V9.1a6.2 6.2 0 1 0 5.3 6.2V8.6a7.6 7.6 0 0 0 4.4 1.4V6.7a4.4 4.4 0 0 1-4.4-4.4z"/>'},
+  {n:'Facebook', u:'weddingshop.vifery', url:'https://www.facebook.com/weddingshop.vifery', svg:'<path d="M14 8.5V6.6c0-.8.2-1.3 1.4-1.3H17V2.2A21 21 0 0 0 14.6 2C12.2 2 10.6 3.5 10.6 6.1v2.4H8v3.4h2.6V22H14V11.9h2.7l.4-3.4z"/>'},
+];
+const ICONO_WA = '<path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/>';
+const ICONO_MAIL = '<path d="M3 5h18v14H3zm2 2v.5l7 4.5 7-4.5V7z"/>';
+const ICONO_PIN = '<path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>';
+
+const GRUPOS = {
+  despedida: {n:'Despedida de soltera', subs:['Bandas','Sombreros','Diademas','Velos y tiaras','Lentes','Tatuajes','Pines y accesorios','Juegos','Para fotos','Vasos y termos','Shots y copas','Popotes','Globos','Decoración','Kits anticruda']},
+  bodas:     {n:'Bodas', subs:['Detalles novios','Letreros de pastel','Recuerdos para invitados','Números de mesa']},
+  groom:     {n:'Groom to be', subs:['Groom to be']},
+};
+const POR_PAGINA = 24;
+// Costos de envío ESTIMADOS (aún sin cuenta de paquetería). Actualizar cuando haya tarifas reales.
+const ENVIOS = [
+  {n:'Chico',   ej:'Lentes, bandas, tatuajes, juegos, pines (hasta 1 kg)', costo:'$110 – $170'},
+  {n:'Mediano', ej:'Vasos, termos, popotes, sombreros, kits (1 a 3 kg)',    costo:'$150 – $250'},
+  {n:'Grande',  ej:'Piñatas, packs grandes o pedidos de varias cajas',     costo:'Te lo cotizamos'},
+];
+const ENVIO_DESDE = '$110';
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pesos = n => '$' + Math.round(n).toLocaleString('es-MX');
+const linkWA = txt => 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(txt);
+const sinAcentos = s => s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+const slug = s => sinAcentos(s).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const porId = {}; PRODUCTOS.forEach(p => porId[p.id] = p);
+const subPorSlug = {}; Object.entries(GRUPOS).forEach(([g,G]) => G.subs.forEach(s => subPorSlug[g+'/'+slug(s)] = s));
+const cuenta = (g, s) => PRODUCTOS.filter(p => p.g === g && (!s || p.s === s)).length;
+const icono = (path, vb='0 0 24 24') => `<svg viewBox="${vb}">${path}</svg>`;
+
+/* ---------- Menú ---------- */
+function pintarMenu(){
+  const colSubs = g => { const subs = GRUPOS[g].subs.filter(s => cuenta(g,s)); return `<ul class="${subs.length > 7 ? 'dos' : ''}">${subs.map(s => `<li><a href="#/tienda/${g}/${slug(s)}">${s}</a></li>`).join('')}</ul>`; };
+  $('#menu').innerHTML = `
+    <div class="mi" data-r="inicio"><a href="#/">Inicio</a></div>
+    <div class="mi" data-r="tienda"><button aria-haspopup="true">Productos</button>
+      <div class="drop">
+        <div><h5><a href="#/tienda/despedida">Despedida de soltera</a></h5>${colSubs('despedida')}<a class="todo" href="#/tienda/despedida">Ver toda la despedida →</a></div>
+        <div><h5><a href="#/tienda/bodas">Bodas</a></h5>${colSubs('bodas')}
+          <h5 style="margin-top:18px"><a href="#/tienda/groom">Groom to be</a></h5><ul><li><a href="#/tienda/groom">Para el novio</a></li></ul>
+          <a class="todo" href="#/tienda" style="display:block;margin-top:18px">Ver todos los productos →</a></div>
+      </div></div>
+    <div class="mi" data-r="como-comprar"><a href="#/como-comprar">Cómo comprar</a></div>
+    <div class="mi" data-r="ayuda"><button aria-haspopup="true">Ayuda</button>
+      <div class="drop"><ul>
+        <li><a href="#/envios">Envíos</a></li>
+        <li><a href="#/devoluciones">Cambios y devoluciones</a></li>
+        <li><a href="#/nosotros">Quiénes somos</a></li>
+      </ul></div></div>
+    <div class="mi" data-r="contacto"><a href="#/contacto">Contacto</a></div>`;
+  const subsMovil = g => GRUPOS[g].subs.filter(s => cuenta(g,s)).map(s => `<li><a href="#/tienda/${g}/${slug(s)}">${s}</a></li>`).join('');
+  $('#movil').innerHTML = `
+    <div class="cab-m"><span class="serif" style="color:var(--coral);font-size:22px">Menú</span><button class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>
+    <a href="#/">Inicio</a>
+    <details><summary>Despedida de soltera</summary><ul><li><a href="#/tienda/despedida"><b>Ver todo</b></a></li>${subsMovil('despedida')}</ul></details>
+    <details><summary>Bodas</summary><ul><li><a href="#/tienda/bodas"><b>Ver todo</b></a></li>${subsMovil('bodas')}</ul></details>
+    <a href="#/tienda/groom">Groom to be</a>
+    <a href="#/tienda">Todos los productos</a>
+    <a href="#/como-comprar">Cómo comprar</a>
+    <a href="#/envios">Envíos</a>
+    <a href="#/devoluciones">Cambios y devoluciones</a>
+    <a href="#/nosotros">Quiénes somos</a>
+    <a href="#/contacto">Contacto</a>
+    <h6 style="margin-top:20px">Síguenos</h6><div class="redes pie" style="display:flex;gap:10px;padding:0"></div>`;
+}
+
+/* ---------- Piezas ---------- */
+function tarjeta(p){
+  const pocas = p.v.length === 1 && p.v[0][2] <= 3 ? `<div class="quedan">¡Últimas ${p.v[0][2]}!</div>` : '';
+  const boton = !p.p ? `<a class="agregar linea" href="#" data-wa="Hola, ¿qué precio tiene: ${esc(p.n)}?">Pregunta el precio</a>`
+    : p.v.length > 1 ? `<a class="agregar linea" href="#/p/${p.id}">Elegir opción</a>`
+    : `<button class="agregar" data-add="${p.id}|${p.v[0][0]}">Agregar</button>`;
+  return `<article class="card">
+    <a href="#/p/${p.id}" class="foto"><img src="${p.f}" alt="${esc(p.n)}" loading="lazy"></a>
+    <div class="info"><h3><a href="#/p/${p.id}">${esc(p.n)}</a></h3>
+      <div class="precio">${p.p ? pesos(p.p) : ''}</div>${pocas}${boton}</div>
+  </article>`;
+}
+const beneficios = () => `<div class="wrap beneficios">
+  <div class="ben"><i><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg></i><div><b>Envíos a todo México</b>Desde Zapopan, Jalisco</div></div>
+  <div class="ben"><i><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></i><div><b>Pago seguro</b>Con Mercado Pago</div></div>
+  <div class="ben"><i><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></i><div><b>MercadoLíder Gold</b>Reputación verde en ML</div></div>
+  <div class="ben"><i><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></i><div><b>Te asesoramos</b>Por WhatsApp</div></div>
+</div>`;
+const checklist = () => `<div class="checklist">
+  <div><h2>Cómo comprar <span class="script">paso a paso</span></h2>
+    <p>Te confirmamos existencias y envío por WhatsApp y te mandamos tu link de pago de Mercado Pago.</p>
+    <a class="btn btn-blanco" href="#/como-comprar" style="margin-top:18px">Ver cómo funciona</a></div>
+  <ul><li>Elige tus productos</li><li>Envía tu pedido por WhatsApp</li><li>Paga con tu link de Mercado Pago</li><li>Recíbelo en tu casa</li></ul>
+</div>`;
+const quote = () => `<section class="quote"><small>DAILY QUOTE</small><h2>Un sí para <em class="script">siempre</em>,<br>un amor para toda la vida</h2></section>`;
+
+/* ---------- Vistas ---------- */
+function vistaInicio(){
+  const tiles = [['despedida','Sombreros'],['despedida','Juegos'],['despedida','Vasos y termos'],['despedida','Popotes'],['despedida','Globos'],['despedida','Tatuajes'],
+                 ['despedida','Para fotos'],['despedida','Lentes'],['despedida','Bandas'],['bodas','Detalles novios'],['bodas','Letreros de pastel'],['groom','Groom to be']]
+    .filter(([g,s]) => cuenta(g,s)).map(([g,s]) => { const p = PRODUCTOS.find(x => x.g === g && x.s === s);
+      return `<a class="tile" href="#/tienda/${g}/${slug(s)}"><div class="tf"><img src="${p.f}" alt="" loading="lazy"></div>${s}</a>`; }).join('');
+  return `
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="pre">For a special year</div>
+        <h1>Todo para el año de tu boda <span class="script">despedida &amp; más</span></h1>
+        <p>Accesorios para la novia, vasos, juegos y decoración para tu despedida de soltera. Lo mismo que ya nos compras en Mercado Libre, ahora directo con nosotras.</p>
+        <div class="cta"><a class="btn btn-blanco" href="#/tienda">Ver productos</a><a class="btn btn-linea" href="#" data-wa="Hola, quiero armar un kit para despedida">Arma tu kit por WhatsApp</a></div>
+      </div>
+      <img class="hero-logo" src="img/logo.webp" alt="Logo Wedding Shop by Vifery">
+    </div>
+    <div class="lema">WEDDING SHOP · BY VIFERY</div>
+  </section>
+  ${beneficios()}
+  <section class="sec crema"><div class="wrap">
+    <div class="cab"><h2 class="serif">Compra por <span class="script">categoría</span></h2></div>
+    <div class="tiles">${tiles}</div>
+  </div></section>
+  <section class="sec"><div class="wrap">
+    <div class="cab"><h2 class="serif">Los más <span class="script">pedidos</span></h2><p>Lo que más piden las novias y su team</p></div>
+    <div class="grid">${PRODUCTOS.slice(0,12).map(tarjeta).join('')}</div>
+    <div class="mas"><a class="btn btn-borde" href="#/tienda">Ver los ${PRODUCTOS.length} productos</a></div>
+  </div></section>
+  <section class="sec crema">${checklist()}</section>
+  ${quote()}`;
+}
+
+let busqueda = '', mostrar = POR_PAGINA;
+function vistaTienda(g, s){
+  const titulo = s || (g ? GRUPOS[g].n : 'Todos los productos');
+  const lat = Object.entries(GRUPOS).map(([k,G]) => `<h5><a href="#/tienda/${k}" style="padding:0;color:inherit">${G.n}</a></h5><ul>` +
+    (k === 'groom' ? '' : G.subs.filter(x => cuenta(k,x)).map(x => `<li><a class="${k===g && x===s ? 'on' : ''}" href="#/tienda/${k}/${slug(x)}">${x}<small>${cuenta(k,x)}</small></a></li>`).join('')) + '</ul>').join('');
+  const chips = g && g !== 'groom' ? `<a class="${!s?'on':''}" href="#/tienda/${g}">Todo</a>` + GRUPOS[g].subs.filter(x => cuenta(g,x)).map(x => `<a class="${x===s?'on':''}" href="#/tienda/${g}/${slug(x)}">${x}</a>`).join('')
+    : Object.entries(GRUPOS).map(([k,G]) => `<a class="${k===g?'on':''}" href="#/tienda/${k}">${G.n}</a>`).join('');
+  return `<div class="wrap">
+    <div class="migas"><a href="#/">Inicio</a> / <a href="#/tienda">Productos</a>${g ? ` / <a href="#/tienda/${g}">${GRUPOS[g].n}</a>` : ''}${s && g !== 'groom' ? ' / ' + s : ''}</div>
+    <div class="tienda">
+      <aside class="lateral"><ul><li><a class="${!g?'on':''}" href="#/tienda">Todos<small>${PRODUCTOS.length}</small></a></li></ul>${lat}</aside>
+      <div>
+        <div class="barra"><div><h1 class="serif">${titulo}</h1><div class="n" id="n"></div></div>
+          <div class="buscar"><input id="q" type="search" placeholder="Buscar: sombrero, lotería, groom…" value="${esc(busqueda)}" aria-label="Buscar productos"></div></div>
+        <div class="subchips">${chips}</div>
+        <div class="grid" id="grid"></div>
+        <div class="mas" id="mas"><button id="verMas">Ver más productos</button></div>
+      </div>
+    </div></div>`;
+}
+function pintarGrid(g, s){
+  const q = sinAcentos(busqueda.trim());
+  const l = PRODUCTOS.filter(p => (!g || p.g === g) && (!s || p.s === s) &&
+    (!q || q.split(/\s+/).every(w => sinAcentos(p.n + ' ' + p.s + ' ' + p.v.map(v => v[1]).join(' ')).includes(w))));
+  $('#grid').innerHTML = l.length ? l.slice(0, mostrar).map(tarjeta).join('') : '<p class="vacio-grid">No encontramos ese producto. Escríbenos por WhatsApp y te ayudamos.</p>';
+  $('#mas').style.display = l.length > mostrar ? '' : 'none';
+  $('#n').textContent = `${l.length} producto${l.length === 1 ? '' : 's'}`;
+}
+
+let fichaCant = 1;
+function vistaProducto(p){
+  if (!p) return `<div class="wrap pagina"><h1 class="serif">Ups</h1><p class="intro">Ese producto ya no está disponible. <a href="#/tienda">Ver la tienda</a></p></div>`;
+  fichaCant = 1;
+  const G = GRUPOS[p.g];
+  const parrafos = (p.d || '').split(/\n+/).map(x => x.trim()).filter(Boolean).map(x => `<p>${esc(x)}</p>`).join('');
+  const sel = p.v.length > 1 ? `<label for="var">Elige tu opción</label><select id="var">${p.v.map(v => `<option value="${esc(v[0])}">${esc(v[1] || v[0])}</option>`).join('')}</select>` : '';
+  const stock = p.v[0][2];
+  const relacionados = PRODUCTOS.filter(x => x.s === p.s && x.id !== p.id).slice(0, 4);
+  return `<div class="wrap">
+    <div class="migas"><a href="#/">Inicio</a> / <a href="#/tienda/${p.g}">${G.n}</a>${p.g !== 'groom' ? ` / <a href="#/tienda/${p.g}/${slug(p.s)}">${p.s}</a>` : ''}</div>
+    <div class="ficha">
+      <div class="galeria">
+        <div class="principal"><img id="fotoGrande" src="${p.fs[0]}" alt="${esc(p.n)}"></div>
+        ${p.fs.length > 1 ? `<div class="miniaturas">${p.fs.map((f,i) => `<button class="${i?'':'on'}" data-foto="${f}" aria-label="Foto ${i+1}"><img src="${f}" alt="" loading="lazy"></button>`).join('')}</div>` : ''}
+      </div>
+      <div class="datos">
+        <h1>${esc(p.n)}</h1>
+        <div class="precio">${p.p ? pesos(p.p) : 'Pregunta el precio'}</div>
+        <div class="nota">Más envío desde ${ENVIO_DESDE} según tu código postal${p.v.length === 1 && stock <= 3 ? ` · ¡Últimas ${stock} piezas!` : ''}</div>
+        ${sel}
+        ${p.p ? `<div class="compra">
+          <div class="cantidad"><button data-cant="-1" aria-label="Menos">−</button><span id="cant">1</span><button data-cant="1" aria-label="Más">+</button></div>
+          <button class="btn btn-coral" data-addficha="${p.id}">Agregar al carrito</button>
+        </div>` : ''}
+        <a class="btn btn-borde pregunta" href="#" data-wa="Hola, tengo una pregunta sobre: ${esc(p.n)}">Pregúntanos por WhatsApp</a>
+        <div class="garantias">
+          <div>Pago seguro con Mercado Pago: tarjeta, débito, OXXO o transferencia</div>
+          <div>Envíos a todo México desde Zapopan, Jalisco</div>
+          <div><a href="#/devoluciones">Cambios y devoluciones</a> dentro de 7 días</div>
+        </div>
+      </div>
+    </div>
+    ${parrafos ? `<div class="descripcion"><h2 class="serif">Descrip<span class="script">ción</span></h2>${parrafos}</div>` : ''}
+    ${relacionados.length ? `<div class="cab"><h2 class="serif">También te <span class="script">puede gustar</span></h2></div><div class="grid" style="margin-bottom:48px">${relacionados.map(tarjeta).join('')}</div>` : ''}
+  </div>`;
+}
+
+const INFO = {
+  'como-comprar': () => `<div class="wrap pagina">
+    <h1 class="serif">Cómo comprar <span class="script">paso a paso</span></h1>
+    <p class="intro">Comprar con nosotras es muy sencillo. Te atendemos personalmente por WhatsApp y pagas seguro con Mercado Pago.</p>
+    <div class="pasos">
+      <div class="paso"><b>Elige</b>Agrega tus productos al carrito.</div>
+      <div class="paso"><b>Envía tu pedido</b>Pícale a "Enviar pedido por WhatsApp" y escribe tu código postal.</div>
+      <div class="paso"><b>Paga</b>Te confirmamos existencias y envío y te mandamos tu link de Mercado Pago.</div>
+      <div class="paso"><b>Recibe</b>Empacamos tu pedido con cariño y te mandamos tu guía.</div>
+    </div>
+    <h3>¿Cómo puedo pagar?</h3>
+    <p>Con tu link de Mercado Pago puedes pagar con tarjeta de crédito o débito, en efectivo en OXXO o por transferencia. No necesitas cuenta de Mercado Pago.</p>
+    <h3>¿Cuándo envían mi pedido?</h3>
+    <p>Una vez confirmado tu pago, preparamos tu pedido y te enviamos el comprobante y tu número de guía para que lo rastrees.</p>
+    <h3>¿Puedo armar un kit para mi despedida?</h3>
+    <p>¡Claro! Escríbenos por WhatsApp con la fecha, cuántas invitadas son y tu temática, y te ayudamos a armarlo.</p>
+    <div class="aviso-caja">¿Dudas? <a href="#" data-wa="Hola, tengo una duda sobre cómo comprar">Escríbenos por WhatsApp</a> y te ayudamos. Gracias por confiar en nosotras.</div>
+  </div>`,
+  'envios': () => `<div class="wrap pagina">
+    <h1 class="serif">Envíos <span class="script">a todo México</span></h1>
+    <p class="intro">Enviamos desde Zapopan, Jalisco, a cualquier parte de la República.</p>
+    <h3>¿Cuánto cuesta el envío?</h3>
+    <p>Depende de tu código postal y del tamaño de tu pedido. Estos son costos <b>aproximados</b>; al mandarnos tu pedido por WhatsApp con tu código postal te confirmamos el costo exacto <b>antes de pagar</b>.</p>
+    <table class="tabla">
+      <tr><th>Tu pedido</th><th>Ejemplos</th><th>Envío aprox.</th></tr>
+      ${ENVIOS.map(e => `<tr><td><b>${e.n}</b></td><td>${e.ej}</td><td class="c">${e.costo}</td></tr>`).join('')}
+    </table>
+    <h3>¿Cuánto tarda en llegar?</h3>
+    <p>Con servicio económico normalmente llega en <b>3 a 7 días hábiles</b>, según tu ciudad. Si tu despedida o tu boda ya tiene fecha, dínosla y te ofrecemos servicio express para que llegue a tiempo.</p>
+    <h3>¿Cómo rastreo mi pedido?</h3>
+    <p>Cuando enviemos tu pedido te mandamos tu número de guía por WhatsApp o correo para que lo sigas en todo momento.</p>
+    <h3>¿Y si mi paquete llega dañado?</h3>
+    <p>Escríbenos con fotos dentro de los 7 días posteriores a recibirlo y lo resolvemos. Revisa nuestra <a href="#/devoluciones">política de cambios y devoluciones</a>.</p>
+    <div class="aviso-caja"><a href="#" data-wa="Hola, ¿cuánto cuesta el envío a mi código postal? Mi CP es: ">Cotiza tu envío por WhatsApp</a></div>
+  </div>`,
+  'devoluciones': () => `<div class="wrap pagina">
+    <h1 class="serif">Cambios y <span class="script">devoluciones</span></h1>
+    <p class="intro">En Wedding Shop by Vifery queremos que estés completamente satisfecha con tu compra.</p>
+    <h3>1. Plazo para solicitar una devolución</h3>
+    <p>Puedes solicitar la devolución de tu producto dentro de los 7 días naturales posteriores a la recepción del pedido.</p>
+    <h3>2. Condiciones del producto</h3>
+    <p>Para que la devolución sea aceptada, el producto deberá:</p>
+    <ul><li>Estar sin uso</li><li>Encontrarse en perfectas condiciones</li><li>Conservar su empaque original, accesorios y etiquetas</li><li>No presentar daños, manchas o alteraciones</li></ul>
+    <p>Nos reservamos el derecho de rechazar devoluciones que no cumplan con estas condiciones.</p>
+    <h3>3. Costo del envío de devolución</h3>
+    <p>El costo de la guía de devolución corre por cuenta del cliente, salvo en casos donde el producto presente defectos de fábrica o se haya enviado un artículo incorrecto. Puedes elegir la paquetería de tu preferencia.</p>
+    <h3>4. Productos no elegibles para devolución</h3>
+    <p>Por higiene y/o personalización, no se aceptan devoluciones en:</p>
+    <ul><li>Productos personalizados</li><li>Artículos de uso personal (popotes, accesorios para bebidas, kits abiertos, etc.)</li><li>Productos en liquidación u ofertas especiales (salvo defecto de fábrica)</li></ul>
+    <h3>5. Proceso de devolución</h3>
+    <p>Para iniciar una devolución escríbenos a <a href="mailto:${CORREO}">${CORREO}</a> o por <a href="#" data-wa="Hola, quiero solicitar una devolución. Mi número de pedido es: ">WhatsApp</a> indicando:</p>
+    <ul><li>Número de pedido</li><li>Motivo de la devolución</li><li>Fotografías del producto (si aplica)</li></ul>
+    <p>Nuestro equipo te indicará los pasos a seguir.</p>
+    <h3>6. Reembolsos</h3>
+    <p>Una vez recibido y revisado el producto, el reembolso se realizará exclusivamente por el monto del producto; no incluye gastos de envío. Se procesa en un plazo aproximado de 5 a 10 días hábiles, según el método de pago utilizado.</p>
+  </div>`,
+  'nosotros': () => `<div class="wrap pagina">
+    <h1 class="serif">Quiénes <span class="script">somos</span></h1>
+    <p class="intro">Somos Wedding Shop by Vifery, una tienda en línea mexicana especializada en artículos para bodas, despedidas de soltera y celebraciones previas al gran día.</p>
+    <p>Nos apasiona acompañarte en cada momento especial con productos que sumen emoción, estilo y recuerdos inolvidables.</p>
+    <h3>Cómo nace Wedding Shop by Vifery</h3>
+    <p>En 2023 nace Wedding Shop del gusto por celebrar en grande y del deseo de facilitar la organización de eventos tan importantes como una boda o una despedida. Detectamos la necesidad de encontrar en un solo lugar productos bien seleccionados, con buen diseño y listos para usar.</p>
+    <h3>Por qué vendemos este tipo de productos</h3>
+    <p>Creemos que los detalles hacen la diferencia. Cada accesorio, kit o artículo que ofrecemos está pensado para crear experiencias divertidas, memorables y llenas de significado.</p>
+    <h3>Nuestro equipo</h3>
+    <p>Detrás de Wedding Shop by Vifery hay un equipo comprometido que se encarga de seleccionar cuidadosamente cada producto, preparar y empacar los pedidos con atención al detalle y brindarte una atención cercana y personalizada.</p>
+    <h3>Nuestro estilo</h3>
+    <p>Alegre, moderno y elegante, con un toque festivo. Amamos los tonos claros, los acabados bonitos y las celebraciones auténticas, siempre cuidando la calidad y presentación de cada pedido.</p>
+  </div>`,
+  'privacidad': () => `<div class="wrap pagina">
+    <h1 class="serif">Aviso de <span class="script">privacidad</span></h1>
+    <p class="intro">Wedding Shop by Vifery, con domicilio en Zapopan, Jalisco, es responsable del uso y protección de tus datos personales.</p>
+    <h3>¿Qué datos usamos?</h3>
+    <p>Solo los que tú nos compartes para atender tu pedido: nombre, teléfono o WhatsApp, correo, dirección de entrega y código postal.</p>
+    <h3>¿Para qué los usamos?</h3>
+    <ul><li>Confirmar existencias, cotizar y enviarte tu pedido</li><li>Generar tu guía de envío y darte seguimiento</li><li>Atender dudas, cambios y devoluciones</li></ul>
+    <p>No vendemos ni compartimos tus datos con terceros, salvo con la paquetería y la plataforma de pago (Mercado Pago) en lo necesario para completar tu compra.</p>
+    <h3>Pagos</h3>
+    <p>Los pagos se hacen directamente en Mercado Pago. Nosotras no vemos ni guardamos los datos de tu tarjeta.</p>
+    <h3>Tus derechos</h3>
+    <p>Puedes pedir el acceso, corrección o eliminación de tus datos, u oponerte a su uso, escribiendo a <a href="mailto:${CORREO}">${CORREO}</a>.</p>
+    <h3>Cambios a este aviso</h3>
+    <p>Cualquier cambio lo publicaremos en esta misma página. Última actualización: noviembre de 2026.</p>
+  </div>`,
+  'contacto': () => `<div class="wrap pagina" style="max-width:1000px">
+    <h1 class="serif">Contacto <span class="script">estamos para ti</span></h1>
+    <p class="intro">¿Tienes dudas, quieres armar un kit o cotizar un pedido grande? Escríbenos, te respondemos personalmente.</p>
+    <div class="contacto">
+      <div class="canales">
+        <a class="canal" href="#" data-wa="Hola, tengo una pregunta"><i>${icono(ICONO_WA)}</i><div><b>WhatsApp</b><small>33 2066 1300 · la forma más rápida</small></div></a>
+        <a class="canal" href="mailto:${CORREO}"><i>${icono(ICONO_MAIL)}</i><div><b>Correo</b><small>${CORREO}</small></div></a>
+        <div class="canal"><i>${icono(ICONO_PIN)}</i><div><b>Ubicación</b><small>Zapopan, Jalisco · envíos a todo México</small></div></div>
+        ${REDES.map(r => `<a class="canal" href="${r.url}" target="_blank" rel="noopener"><i>${icono(r.svg)}</i><div><b>${r.n}</b><small>${r.u}</small></div></a>`).join('')}
+      </div>
+      <form class="forma" id="forma">
+        <h3 style="margin:0 0 4px;font-family:'Montserrat',sans-serif;font-weight:500;color:var(--coral-osc)">Mándanos un mensaje</h3>
+        <input name="nombre" placeholder="Tu nombre" required>
+        <select name="tema"><option>Quiero hacer un pedido</option><option>Armar un kit para despedida</option><option>Duda sobre un producto</option><option>Costo de envío</option><option>Cambio o devolución</option><option>Otro</option></select>
+        <input name="fecha" placeholder="Fecha de tu evento (opcional)">
+        <textarea name="mensaje" placeholder="Cuéntanos qué necesitas" required></textarea>
+        <button class="btn btn-coral" type="submit">Enviar por WhatsApp</button>
+        <small style="color:var(--suave)">Al enviar se abre WhatsApp con tu mensaje listo. Consulta nuestro <a href="#/privacidad">aviso de privacidad</a>.</small>
+      </form>
+    </div>
+  </div>`,
+};
+
+/* ---------- Ruteo ---------- */
+function ruta(){
+  const partes = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
+  const [r, a, b] = partes;
+  let html, activo = r || 'inicio';
+  if (!r) html = vistaInicio();
+  else if (r === 'tienda'){
+    const g = GRUPOS[a] ? a : null;
+    const s = g === 'groom' ? null : (g && b ? subPorSlug[g + '/' + b] : null);
+    html = vistaTienda(g, s);
+    $('#app').innerHTML = html;
+    mostrar = POR_PAGINA; pintarGrid(g, s);
+    $('#q').addEventListener('input', e => { busqueda = e.target.value; mostrar = POR_PAGINA; pintarGrid(g, s); });
+    $('#verMas').onclick = () => { mostrar += POR_PAGINA; pintarGrid(g, s); };
+    terminar('tienda'); return;
+  }
+  else if (r === 'p') { html = vistaProducto(porId[a]); activo = 'tienda'; }
+  else if (INFO[r]) { html = INFO[r](); if (['envios','devoluciones','nosotros','privacidad'].includes(r)) activo = 'ayuda'; }
+  else html = vistaInicio();
+  $('#app').innerHTML = html;
+  terminar(activo);
+}
+function terminar(activo){
+  document.querySelectorAll('.mi').forEach(m => m.classList.toggle('on', m.dataset.r === activo));
+  document.querySelectorAll('.redes').forEach(el => el.innerHTML = REDES.map(r =>
+    `<a href="${r.url}" target="_blank" rel="noopener" aria-label="${r.n}" title="${r.n}">${icono(r.svg)}</a>`).join(''));
+  const f = $('#forma');
+  if (f) f.onsubmit = e => { e.preventDefault(); const d = new FormData(f);
+    window.open(linkWA(`Hola, soy ${d.get('nombre')}.\nTema: ${d.get('tema')}${d.get('fecha') ? '\nFecha del evento: ' + d.get('fecha') : ''}\n${d.get('mensaje')}`), '_blank'); };
+  abrirMenuMovil(false);
+  document.activeElement && document.activeElement.blur();
+  window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', ruta);
+
+/* ---------- Carrito: clave "pub|sku" → cantidad ---------- */
+let carrito = {};
+try { carrito = JSON.parse(localStorage.getItem('ws-carrito2')) || {}; } catch (e) {}
+for (const k in carrito) if (!porId[k.split('|')[0]]) delete carrito[k];
+const guardar = () => { try { localStorage.setItem('ws-carrito2', JSON.stringify(carrito)); } catch (e) {} };
+const varDe = k => { const [id, sku] = k.split('|'); const p = porId[id]; return [p, p.v.find(v => v[0] === sku) || p.v[0]]; };
+function sumar(k, n = 1){
+  const [, v] = varDe(k);
+  const quiere = (carrito[k] || 0) + n;
+  if (quiere > v[2]) { alert('Por ahora solo tenemos ' + v[2] + ' de este producto. Escríbenos si necesitas más.'); if ((carrito[k] || 0) >= v[2]) return false; carrito[k] = v[2]; }
+  else carrito[k] = quiere;
+  guardar(); pintarCarrito(); return true;
+}
+function pintarCarrito(){
+  const ks = Object.keys(carrito);
+  let n = 0, total = 0; const lineas = [];
+  $('#items').innerHTML = ks.length ? ks.map(k => {
+    const [p, v] = varDe(k); const c = carrito[k];
+    n += c; total += c * p.p;
+    lineas.push(`• ${c} x ${p.n}${p.v.length > 1 ? ' (' + (v[1] || v[0]) + ')' : ''} — ${pesos(c * p.p)}`);
+    return `<div class="item"><a href="#/p/${p.id}"><img src="${p.f}" alt=""></a>
+      <div><h5>${esc(p.n)}</h5>${p.v.length > 1 ? `<div class="var">${esc(v[1] || v[0])}</div>` : ''}
+      <div class="cant"><button data-menos="${k}">−</button>${c}<button data-mas="${k}">+</button></div></div>
+      <b>${pesos(p.p * c)}</b></div>`;
+  }).join('') : '<p class="vacio">Tu carrito está vacío</p>';
+  $('#contador').textContent = n;
+  $('#total').textContent = pesos(total);
+  $('#enviar').href = linkWA(`Hola, quiero hacer este pedido desde la página:\n${lineas.join('\n')}\nSubtotal: ${pesos(total)} + envío\nMi código postal es: `);
+  $('#enviar').style.opacity = ks.length ? 1 : .5;
+}
+const abrir = on => { $('#panel').classList.toggle('on', on); $('#velo').classList.toggle('on', on); };
+const abrirMenuMovil = on => { $('#movil').classList.toggle('on', on); $('#velo').classList.toggle('on', on || $('#panel').classList.contains('on')); };
+
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-add],[data-addficha],[data-mas],[data-menos],[data-wa],[data-foto],[data-cant],[data-cerrar]');
+  if (!t) return;
+  if (t.dataset.add){ if (sumar(t.dataset.add)) abrir(true); }
+  if (t.dataset.addficha){
+    const p = porId[t.dataset.addficha]; const sel = $('#var');
+    if (sumar(p.id + '|' + (sel ? sel.value : p.v[0][0]), fichaCant)) abrir(true);
+  }
+  if (t.dataset.cant){ fichaCant = Math.max(1, fichaCant + Number(t.dataset.cant)); $('#cant').textContent = fichaCant; }
+  if (t.dataset.foto){ $('#fotoGrande').src = t.dataset.foto; document.querySelectorAll('.miniaturas button').forEach(b => b.classList.toggle('on', b === t)); }
+  if (t.dataset.mas) sumar(t.dataset.mas);
+  if (t.dataset.menos){ if (--carrito[t.dataset.menos] <= 0) delete carrito[t.dataset.menos]; guardar(); pintarCarrito(); }
+  if (t.dataset.wa !== undefined && t.dataset.wa !== ''){ e.preventDefault(); window.open(linkWA(t.dataset.wa), '_blank'); }
+  if (t.dataset.cerrar !== undefined){ abrir(false); abrirMenuMovil(false); }
+});
+$('#abrirCarrito').onclick = () => abrir(true);
+$('#abrirMenu').onclick = () => abrirMenuMovil(true);
+$('#velo').onclick = () => { abrir(false); abrirMenuMovil(false); };
+$('#enviar').addEventListener('click', e => { if (!Object.keys(carrito).length) e.preventDefault(); });
+
+pintarMenu(); pintarCarrito(); ruta();
+</script>
+</body>
+</html>
