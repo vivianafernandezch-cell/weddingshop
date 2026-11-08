@@ -41,6 +41,9 @@ a{color:inherit}
 .aviso{background:var(--coral);color:#fff;font-size:13px;letter-spacing:.04em}
 .aviso .wrap{display:flex;justify-content:center;align-items:center;gap:16px;min-height:36px;position:relative}
 .aviso .redes{position:absolute;right:16px;display:flex;gap:12px}
+.aviso.promo{background:#5a3a33;font-size:14px}
+.aviso.promo b{color:#F6A84A}
+.antes{color:#a07a6e;font-size:.75em;margin-right:6px;text-decoration:line-through}
 .redes a{display:grid;place-items:center;opacity:.95}
 .redes svg{width:16px;height:16px;fill:currentColor}
 
@@ -431,6 +434,15 @@ const slug = s => sinAcentos(s).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const porId = {}; PRODUCTOS.forEach(p => porId[p.id] = p);
 const subPorSlug = {}; Object.entries(GRUPOS).forEach(([g,G]) => G.subs.forEach(s => subPorSlug[g+'/'+slug(s)] = s));
 const cuenta = (g, s) => PRODUCTOS.filter(p => p.g === g && (!s || p.s === s)).length;
+// Promos automáticas: se activan y se quitan solas por fecha (hora del centro de México). Vista previa: ?promo=buenfin
+const PROMOS = [
+  {id:'buenfin',     nombre:'Buen Fin',                    ini:'2026-11-13T00:00:00-06:00', fin:'2026-11-17T23:59:59-06:00', pct:10, codigo:'BUENFIN'},
+  {id:'blackfriday', nombre:'Black Friday · Cyber Monday', ini:'2026-11-27T00:00:00-06:00', fin:'2026-11-30T23:59:59-06:00', pct:10, codigo:'BLACKFRIDAY'},
+];
+const PROMO = (() => { const q = new URLSearchParams(location.search).get('promo'), ahora = Date.now();
+  return PROMOS.find(x => q ? x.id === q : ahora >= Date.parse(x.ini) && ahora <= Date.parse(x.fin)) || null; })();
+if (PROMO) PRODUCTOS.forEach(p => { if (p.p) { p.po = p.p; p.p = Math.round(p.p * (1 - PROMO.pct / 100)); } });
+const antes = p => p.po ? `<span class="antes">${pesos(p.po)}</span>` : '';
 const icono = (path, vb='0 0 24 24') => `<svg viewBox="${vb}">${path}</svg>`;
 
 /* ---------- Menú ---------- */
@@ -478,7 +490,7 @@ function tarjeta(p){
   return `<article class="card">
     <a href="#/p/${p.id}" class="foto"><img src="${p.f}" alt="${esc(p.n)}" loading="lazy"></a>
     <div class="info"><h3><a href="#/p/${p.id}">${esc(p.n)}</a></h3>
-      <div class="precio">${p.p ? pesos(p.p) : ''}</div>${pocas}${boton}</div>
+      <div class="precio">${p.p ? antes(p) + pesos(p.p) : ''}</div>${pocas}${boton}</div>
   </article>`;
 }
 const beneficios = () => `<div class="wrap beneficios">
@@ -575,7 +587,7 @@ function vistaProducto(p){
       </div>
       <div class="datos">
         <h1>${esc(p.n)}</h1>
-        <div class="precio">${p.p ? pesos(p.p) : 'Pregunta el precio'}</div>
+        <div class="precio">${p.p ? antes(p) + pesos(p.p) : 'Pregunta el precio'}</div>
         <div class="nota">Más envío desde ${ENVIO_DESDE} según tu código postal${p.v.length === 1 && stock <= 3 ? ` · ¡Últimas ${stock} piezas!` : ''}</div>
         ${sel}
         ${p.p ? `<div class="compra">
@@ -764,7 +776,7 @@ function pintarCarrito(){
   }).join('') : '<p class="vacio">Tu carrito está vacío</p>';
   $('#contador').textContent = n;
   $('#total').textContent = pesos(total);
-  $('#enviar').href = linkWA(`Hola, quiero hacer este pedido desde la página:\n${lineas.join('\n')}\nSubtotal: ${pesos(total)} + envío\nMi código postal es: `);
+  $('#enviar').href = linkWA(`Hola, quiero hacer este pedido desde la página:${PROMO ? '\n(Promo ' + PROMO.nombre + ' −' + PROMO.pct + '% ya aplicada · ' + PROMO.codigo + ')' : ''}\n${lineas.join('\n')}\nSubtotal: ${pesos(total)} + envío\nMi código postal es: `);
   $('#enviar').style.opacity = ks.length ? 1 : .5;
 }
 const abrir = on => { $('#panel').classList.toggle('on', on); $('#velo').classList.toggle('on', on); };
@@ -790,6 +802,8 @@ $('#abrirMenu').onclick = () => abrirMenuMovil(true);
 $('#velo').onclick = () => { abrir(false); abrirMenuMovil(false); };
 $('#enviar').addEventListener('click', e => { if (!Object.keys(carrito).length) e.preventDefault(); });
 
+if (PROMO) { const a = $('.aviso'); a.classList.add('promo');
+  a.querySelector('span').innerHTML = `<b>${PROMO.nombre}:</b> ${PROMO.pct}% de descuento en toda la tienda ✨ · Envíos a todo México`; }
 pintarMenu(); pintarCarrito(); ruta();
 </script>
 </body>
