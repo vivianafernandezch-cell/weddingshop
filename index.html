@@ -41,8 +41,8 @@ a{color:inherit}
 .aviso{background:var(--coral);color:#fff;font-size:13px;letter-spacing:.04em}
 .aviso .wrap{display:flex;justify-content:center;align-items:center;gap:16px;min-height:36px;position:relative}
 .aviso .redes{position:absolute;right:16px;display:flex;gap:12px}
-.aviso.promo{background:#5a3a33;font-size:14px}
-.aviso.promo b{color:#F6A84A}
+.aviso.promo{background:var(--coral-osc);font-size:14px;font-weight:500}
+.aviso.promo b{color:#fff;text-transform:uppercase;letter-spacing:.12em}
 .antes{color:#a07a6e;font-size:.75em;margin-right:6px;text-decoration:line-through}
 .redes a{display:grid;place-items:center;opacity:.95}
 .redes svg{width:16px;height:16px;fill:currentColor}
@@ -105,6 +105,13 @@ nav.menu{display:flex;gap:4px;font-size:14px;letter-spacing:.05em;height:100%}
 .btn-borde{border:1px solid var(--coral);color:var(--coral);background:#fff}
 .hero-logo{justify-self:center;width:min(360px,80%);filter:drop-shadow(0 6px 24px rgba(160,80,50,.22))}
 .lema{position:absolute;bottom:18px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:.5em;opacity:.85}
+/* Sello de promo en el banner */
+.sello{display:inline-flex;align-items:center;gap:14px;background:#fff;color:var(--coral-osc);border-radius:18px;padding:10px 20px 10px 14px;margin-bottom:18px;box-shadow:0 8px 28px rgba(160,80,50,.25)}
+.sello .pct{font-family:'Montserrat',sans-serif;font-weight:700;font-size:58px;line-height:1;letter-spacing:-.03em;white-space:nowrap}
+.sello .txt{text-align:left;line-height:1.25}
+.sello .txt b{display:block;font-size:15px;letter-spacing:.22em;text-transform:uppercase}
+.sello .txt span{font-size:16px;color:#7a5a50}
+.sello .txt small{display:block;font-size:12px;color:#a07a6e;margin-top:2px}
 
 /* Beneficios */
 .beneficios{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:28px 16px}
@@ -299,6 +306,11 @@ footer a:hover{color:var(--coral)}
   .hero p{margin-left:auto;margin-right:auto}
   .hero .cta{justify-content:center}
   .hero-logo{order:-1;width:180px}
+  .sello{gap:12px;padding:10px 16px 10px 12px}
+  .sello .pct{font-size:42px}
+  .sello{max-width:100%}
+  .sello .txt span{font-size:14px}
+  .sello .txt b{font-size:13px}
   .grid,.tienda .grid{grid-template-columns:repeat(2,1fr);gap:10px}
   .tiles{grid-template-columns:repeat(3,1fr)}
   .info{padding:10px}
@@ -517,10 +529,11 @@ function vistaInicio(){
   <section class="hero">
     <div class="wrap">
       <div>
+        ${PROMO ? `<div class="sello"><div class="pct">−${PROMO.pct}%</div><div class="txt"><b>${PROMO.nombre}</b><span>de descuento en toda la tienda</span><small>Válido hasta el ${new Date(PROMO.fin).toLocaleDateString('es-MX',{day:'numeric',month:'long',timeZone:'America/Mexico_City'})}</small></div></div>` : ''}
         <div class="pre">For a special year</div>
         <h1>Todo para el año de tu boda <span class="script">despedida &amp; más</span></h1>
         <p>Accesorios para la novia, vasos, juegos y decoración para tu despedida de soltera. Lo mismo que ya nos compras en Mercado Libre, ahora directo con nosotras.</p>
-        <div class="cta"><a class="btn btn-blanco" href="#/tienda">Ver productos</a><a class="btn btn-linea" href="#" data-wa="Hola, quiero armar un kit para despedida">Arma tu kit por WhatsApp</a></div>
+        <div class="cta"><a class="btn btn-blanco" href="#/tienda">${PROMO ? 'Comprar con ' + PROMO.pct + '% off' : 'Ver productos'}</a><a class="btn btn-linea" href="#" data-wa="Hola, quiero armar un kit para despedida">Arma tu kit por WhatsApp</a></div>
       </div>
       <img class="hero-logo" src="img/logo.webp" alt="Logo Wedding Shop by Vifery">
     </div>
